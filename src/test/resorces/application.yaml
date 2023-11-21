@@ -1,0 +1,60 @@
+#default-browser: chrome
+#default-environment: test
+#default:
+#  browser: chrome
+#  environment: test
+
+selenium:
+  browsers:
+    all:
+      chrome:
+        name: chrome
+        driver: CHROME
+        active: true
+      firefox:
+        name: firefox
+        driver: FIREFOX
+        active: false
+      ie:
+        name: ie
+        driver: IE
+        active: false
+      edge:
+        name: edge
+        driver: EDGE
+        active: false
+  environments:
+    all:
+      test:
+        envName: test
+        webUrl: https://sii.pl/
+        title: TesterSii
+        expectedTitle: Rozwiązania i usługi IT, inżynierii i BPO - Sii Polska
+        login: userTest
+        password: passwordTest
+        existingEmail: existingemail@email.com
+        existingPassword: hasloTest
+        amount: 90
+        active: false
+      stage:
+        envName: stage
+        webUrl: https://www.onet.pl/
+        title: TesterSii
+        expectedTitle: Onet – Jesteś na bieżąco
+        login: userStage
+        password: passwordStage
+        existingEmail: existingemail@email.com
+        existingPassword: hasloStage
+        amount: 90
+        active: true
+      prod:
+        envName: prod
+        webUrl: https://www.selenium.dev/documentation/en/webdriver/
+        title: TesterSii
+        expectedTitle: WebDriver | Selenium
+        login: userProd
+        password: passwordProd
+        existingEmail: existingemail@email.com
+        existingPassword: hasloProd
+        amount: 90
+        active: false
