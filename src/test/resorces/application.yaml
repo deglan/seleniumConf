@@ -10,11 +10,11 @@ selenium:
       chrome:
         name: chrome
         driver: CHROME
-        active: true
+        active: false
       firefox:
         name: firefox
         driver: FIREFOX
-        active: false
+        active: true
       ie:
         name: ie
         driver: IE
@@ -35,7 +35,7 @@ selenium:
         existingEmail: existingemail@email.com
         existingPassword: hasloTest
         amount: 90
-        active: false
+        active: true
       stage:
         envName: stage
         webUrl: https://www.onet.pl/
@@ -46,12 +46,12 @@ selenium:
         existingEmail: existingemail@email.com
         existingPassword: hasloStage
         amount: 90
-        active: true
+        active: false
       prod:
         envName: prod
-        webUrl: https://www.selenium.dev/documentation/en/webdriver/
+        webUrl: https://www.selenium.dev
         title: TesterSii
-        expectedTitle: WebDriver | Selenium
+        expectedTitle: Selenium
         login: userProd
         password: passwordProd
         existingEmail: existingemail@email.com
