@@ -1,16 +1,23 @@
 package com.selenium.selenium.configuration;
 
-import com.selenium.selenium.configuration.model.Browsers;
-import com.selenium.selenium.configuration.model.Environments;
-import lombok.Data;
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import com.selenium.selenium.configuration.model.YamlPropertySourceFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
 
 @Configuration
-@ConfigurationProperties(prefix = "selenium")
-@Data
+@PropertySource(value = "classpath:application.yaml", factory = YamlPropertySourceFactory.class)
 public class SeleniumConfig {
 
-    private Browsers browsers;
-    private Environments environments;
+    private final Environment env;
+
+    @Autowired
+    public SeleniumConfig(Environment env) {
+        this.env = env;
+    }
+
+    public String getProperty(String key) {
+        return env.getProperty(key);
+    }
 }

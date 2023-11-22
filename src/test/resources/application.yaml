@@ -1,0 +1,31 @@
+#src/test/resources/application.yaml
+browser: chrome
+environment: stage
+environments:
+  test:
+    webUrl: https://sii.pl/
+    title: TesterSii
+    expectedTitle: Rozwiązania i usługi IT, inżynierii i BPO - Sii Polska
+    login: userTest
+    password: passwordTest
+    existingEmail: existingemail@email.com
+    existingPassword: hasloTest
+    timeout: 90
+  stage:
+    webUrl: https://www.onet.pl/
+    title: TesterSii
+    expectedTitle: Onet – Jesteś na bieżąco
+    login: userStage
+    password: passwordStage
+    existingEmail: existingemail@email.com
+    existingPassword: hasloStage
+    timeout: 90
+  prod:
+    webUrl: https://www.selenium.dev
+    title: TesterSii
+    expectedTitle: Selenium
+    login: userProd
+    password: passwordProd
+    existingEmail: existingemail@email.com
+    existingPassword: hasloProd
+    timeout: 90

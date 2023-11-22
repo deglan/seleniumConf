@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.selenium.selenium", "configuration"})
+@ComponentScan(basePackages = {"com.selenium.selenium"})
 public class SeleniumApplication {
 
 	public static void main(String[] args) {
